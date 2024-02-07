@@ -1,0 +1,15 @@
+{
+    "name": "ls_synapse_rnd_learning_serverless_sql_pool",
+    "type": "Microsoft.Synapse/workspaces/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureSqlDW",
+        "typeProperties": {
+            "connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=synapse-rnd-learning-ondemand.sql.azuresynapse.net;Initial Catalog=work_ldw"
+        },
+        "connectVia": {
+            "referenceName": "AutoResolveIntegrationRuntime",
+            "type": "IntegrationRuntimeReference"
+        }
+    }
+}

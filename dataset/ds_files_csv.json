@@ -1,0 +1,33 @@
+{
+    "name": "ds_files_csv",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "synapse-rnd-learning-WorkspaceDefaultStorage",
+            "type": "LinkedServiceReference"
+        },
+        "parameters": {
+            "filename": {
+                "type": "String"
+            }
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": {
+                    "value": "@dataset().filename",
+                    "type": "Expression"
+                },
+                "folderPath": "dynamic_view_files",
+                "fileSystem": "raw"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": false,
+            "quoteChar": "\""
+        },
+        "schema": []
+    },
+    "type": "Microsoft.Synapse/workspaces/datasets"
+}

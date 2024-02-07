@@ -1,0 +1,24 @@
+{
+    "name": "ds_dynamic_view_files",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "synapse-rnd-learning-WorkspaceDefaultStorage",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "folderPath": "dynamic_view_files",
+                "fileSystem": "raw"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": false,
+            "quoteChar": "\""
+        },
+        "schema": []
+    },
+    "type": "Microsoft.Synapse/workspaces/datasets"
+}
