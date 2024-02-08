@@ -198,7 +198,7 @@
                                 }
                             ],
                             "type": "NonQuery",
-                            "text": "DECLARE @sql NVARCHAR(MAX);\n\nSET @sql = N'CREATE VIEW ' + QUOTENAME(@viewName) + N' AS \nSELECT * FROM OPENROWSET(\n    BULK ' + QUOTENAME(@filename, '''') + N',\n    DATA_SOURCE = ''raw_synapselearningadls_dfs_core_windows_net'',\n    FORMAT = ''CSV'', \n    FIELDTERMINATOR ='','', \n    ROWTERMINATOR = ''\\n'',\n    PARSER_VERSION = ''2.0''\n) AS [r]';\n\nEXEC sp_executesql @sql;\n\n"
+                            "text": "DECLARE @sql NVARCHAR(MAX);\n\nSET @sql = N'CREATE VIEW ' + QUOTENAME(@viewName) + N' AS \nSELECT * FROM OPENROWSET(\n    BULK ' + QUOTENAME(@filename, '''') + N',\n    DATA_SOURCE = ''raw'',\n    FORMAT = ''CSV'', \n    FIELDTERMINATOR ='','', \n    ROWTERMINATOR = ''\\n'',\n    PARSER_VERSION = ''2.0''\n) AS [r]';\n\nEXEC sp_executesql @sql;\n\n"
                         }
                     ],
                     "scriptBlockExecutionTimeout": "02:00:00"
